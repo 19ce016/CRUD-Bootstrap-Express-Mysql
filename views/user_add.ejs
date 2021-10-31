@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= title %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2><%= title %></h2>
+  <form action="/save" method="post">
+    
+    <div class="form-group">
+      <label for="cid">Course id:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="cid"
+        placeholder="Enter Course id"
+        name="cid"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="cname">Course name:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="cname"
+        placeholder="Enter Course name"
+        name="cname"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="dname">Department name:</label>
+      <br />
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="dname"
+          id="CE"
+          value="CE"
+          checked
+        />
+        <label class="form-check-label" for="CE"> CE </label>
+      </div>
+
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="dname"
+          id="CS"
+          value="CS"
+        />
+        <label class="form-check-label" for="CS"> CS </label>
+      </div>
+
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="dname"
+          id="IT"
+          value="IT"
+        />
+        <label class="form-check-label" for="IT"> IT </label>
+      </div>
+
+      
+    </div>
+    <div class="form-group">
+      <label for="iname">Institute name:</label>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="CSPIT" id="CSPIT" name="iname">
+        <label class="form-check-label" for="flexCheckDefault">
+          CSPIT
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="CSPIT" id="DEPSTAR" name="iname">
+        <label class="form-check-label" for="flexCheckChecked">
+          DEPSTAR
+        </label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="uname">University name:</label>
+      <select class="form-control" id="uname" name="uname" required>
+        <option>Charusat</option>
+        <option>AU</option>
+        <option>GTU</option>
+        <option>DDU</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
